@@ -1,0 +1,142 @@
+/* Style the sidebar - fixed full height */
+.sidebar {
+  height: 45%%;
+  width: 10px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color:#ffcccc;
+  overflow-x: hidden;
+  padding-top: 16px;
+}
+
+/* Style sidebar links */
+.sidebar a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 20px;
+    color: #ffcccc;
+  display: block;
+}
+
+/* Style links on mouse-over */
+.sidebar a:hover {
+    color: #ffcccc;
+
+}
+
+/* Style the main content */
+.main {
+  margin-left: 160px; /* Same as the width of the sidenav */
+  padding: 0px 10px;
+}
+
+/* Add media queries for small screens (when the height of the screen is less than 450px, add a smaller padding and font-size) */
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,700,900,400italic,700italic,900italic);
+
+*,
+:before,
+:after {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #ffcccc;
+    color: #ffcccc;
+    font: 16px/1.25 'Raleway', sans-serif;
+    text-align: center;
+}
+
+#wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 10px;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    float: left;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 1em;
+    width: 100%;
+}
+
+h1 {
+    animation: text-shadow 1.5s ease-in-out infinite;
+    font-size: 5em;
+    font-weight: 900;
+    line-height: 1;
+}
+
+h1:hover {
+    animation-play-state: paused;
+}
+
+a {
+    color: #024794;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+@keyframes text-shadow {
+    0% {  
+        transform: translateY(0);
+        text-shadow: 
+            0 0 0 #0c2ffb, 
+            0 0 0 #2cfcfd, 
+            0 0 0 #fb203b, 
+            0 0 0 #fefc4b;
+    }
+
+    20% {  
+        transform: translateY(-1em);
+        text-shadow: 
+            0 0.125em 0 #0c2ffb, 
+            0 0.25em 0 #2cfcfd, 
+            0 -0.125em 0 #fb203b, 
+            0 -0.25em 0 #fefc4b;
+    }
+
+    40% {  
+        transform: translateY(0.5em);
+        text-shadow: 
+            0 -0.0625em 0 #0c2ffb, 
+            0 -0.125em 0 #2cfcfd, 
+            0 0.0625em 0 #fb203b, 
+            0 0.125em 0 #fefc4b;
+    }
+    
+   60% {
+        transform: translateY(-0.25em);
+        text-shadow: 
+            0 0.03125em 0 #0c2ffb, 
+            0 0.0625em 0 #2cfcfd, 
+            0 -0.03125em 0 #fb203b, 
+            0 -0.0625em 0 #fefc4b;
+    }
+
+    80% {  
+        transform: translateY(0);
+        text-shadow: 
+            0 0 0 #0c2ffb, 
+            0 0 0 #2cfcfd, 
+            0 0 0 #fb203b, 
+            0 0 0 #fefc4b;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+      animation: none !important;
+      transition: none !important;
+    }
+}
